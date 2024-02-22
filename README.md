@@ -48,47 +48,10 @@ This repo is intended to document the weekly progress.
 
 ```sudo apt-get install autoconf automake autotools-dev curl python3 libmpc-dev libmpfr-dev libgmp-dev gawk build-essential bison flex texinfo gperf libtool patchutils bc zlib1g-dev libexpat-dev``` *make sure to install the dependencies*
 
-![gnu_dependencies]
 
 ```git clone https://github.com/riscv/riscv-gnu-toolchain```
 
-![gnu_toolchain_clone][[Uploading 1.html…]()
-
-
-
-
-## Create a opt dir
-```mkdir /opt/riscv```  *try sudo incase of permission denial*
-
-In my case I created a driectory ```mkdir riscv``` and ``` chmod 777 home/nawras/riscv ```
-
-## Config and make inside the risc-v gnu toolchain dir 
-
-```./configure --prefix=/opt/riscv```  
-
-In my case ```./configure --prefix=/home/nawras/riscv```  
-
-Then
-```make``` **(Have patience)**
-
-### Troubleshooting
-
-**ERROR 1**: "gcc not found"
-try ```sudo apt-get install build-essential```
-see if gcc is in /usr/bin/
-
-**ERROR 2**: "no acceptable c compiler found in $PATH"
-Open the .bashrc by any editors like vim,emacs,nano,gedit ```nano ~/.bashrc``` 
-Add the below line at the end of .bashrc and save it
-```export PATH="$PATH:/usr/bin/gcc```
-
-**ERROR 3**: Even after installing gcc g++ sometimes it shows 'gcc' command not found ,though it suggest to ```sudo apt install gcc``` which again will cause the same error. I figured this by ```ls```'ing the /usr/bin directory to find the gcc g++ cc to be in red text with black background indicates broken link or missing file.
-
-
-Better purge it at **YOUR OWN RISK** and reinstall it again.
-```sudo apt-get purge gcc```
-
-or **REINSTALL** ```sudo apt-get install --reinstall gcc``` (didn't work for me)
+![make](https://github.com/1165111981/apeksha/assets/160841230/daef8196-90c3-4235-a6bf-5237bb499664)
 
 
 
@@ -104,23 +67,20 @@ make config-gcc
 make 
 sudo make install
 ```
-
-![yosys_make](https://github.com/Nawras-Ahamed/VSD_Squadron_mini_Research/assets/50738659/e722e508-0802-4f50-9cb6-02e9c6bafe48)
-
-
-![buildsuccess_yosys](https://github.com/Nawras-Ahamed/VSD_Squadron_mini_Research/assets/50738659/5e10e5b8-19dd-4460-994f-2759e9b942b1)
-
+![yosis](https://github.com/1165111981/apeksha/assets/160841230/746814c1-a3ce-47bd-9c37-49adac183cd9)
 
 ### iVerilog
 
 ```
 sudo apt-get install iverilog
-```
+```![iver](https://github.com/1165111981/apeksha/assets/160841230/13027901-8497-4ee6-84fc-14aecbe614ec)
+
 
 
 ### GTkWave
 ``` sudo apt-get install gtkwave ```
+![gtk](https://github.com/1165111981/apeksha/assets/160841230/7ab3fdad-d6d9-409e-92be-f110aa5a0600)
 
-![iverilog_gtkwave](https://github.com/Nawras-Ahamed/VSD_Squadron_mini_Research/assets/50738659/344a4225-c6bb-4728-a325-ac66d1621b28)
+
 
 </details>
